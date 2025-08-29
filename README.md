@@ -12,11 +12,11 @@ Additionally, the RPi sends the LED status to an **MQTT Broker** running on an U
 
 \[Qt App on RPi]  <--TCP-->  \[ESP8266] (LED Control)
 |
-\| MQTT
+| MQTT
 v
 \[Ubuntu Server (Mosquitto Broker)]
 
-````
+```
 
 ## Features
 - Connect to ESP8266 via TCP socket.
@@ -24,9 +24,9 @@ v
 - Display ESP8266 responses in the Qt UI.
 - Publish LED status (`ON` / `OFF`) to MQTT broker.
 - Monitor LED status on server using:
-  ```bash
-  mosquitto_sub -h <broker_ip> -t device/led/status
-````
+```bash
+mosquitto_sub -h <broker_ip> -t device/led/status
+```
 
 ## Requirements
 
@@ -73,8 +73,8 @@ v
 * Press **Button 2** → Send `LED_OFF` → LED turns off, status "OFF" published via MQTT.
 * On Ubuntu server, monitor:
 
-  ```bash
-  mosquitto_sub -h 3.81.129.74 -t device/led/status
-  ```
+```bash
+mosquitto_sub -h 3.81.129.74 -t device/led/status
+```
 
 
