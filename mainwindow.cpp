@@ -16,9 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
         connect(socket, &QTcpSocket::readyRead, this, &MainWindow::readResponse);  // THÊM DÒNG NÀY
     }
     // --- MQTT ---
-    //Connect form ec2 ubuntu server: mosquitto_sub -h 34.239.131.243 -t device/led/status
+    // Connect form ec2 ubuntu server: mosquitto_sub -h 34.239.131.243 -t device/led/status
     mqttClient = new QMqttClient(this);
-    mqttClient->setHostname("34.239.131.243"); // IP của MQTT broker (Ubuntu hoặc RPi)
+    mqttClient->setHostname("3.81.129.74"); // IP của MQTT broker (Ubuntu hoặc RPi)
     mqttClient->setPort(1883);
     mqttClient->setClientId("QtClient");
 
